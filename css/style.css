@@ -1,0 +1,319 @@
+:root{
+    --light:#D8F3DC;
+    --dark:#081C15;
+    --primary-color:#40916C;
+    --secondary-color:#1B4332;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+    text-decoration: none;
+}
+header{
+    height: 100px;
+    background-color:var(--dark);
+    color:var(--light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+.logo{
+    color:var(--primary-color);
+    font-weight: 700;
+}
+.logo span{
+    color: var(--light);
+}
+.menu{
+    z-index: 999;
+
+}
+.menu a{
+    color: var(--light);
+    text-transform: uppercase;
+    padding: 0 10px;
+    transition: .25s;
+}
+#check{
+    display: none;
+}
+.mostrar_menu,
+.esconder_menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: .25s;
+}
+
+.menu a:hover,
+.mostrar_menu:hover,
+.esconder_menu:hover{
+    color: var(--primary-color);
+}
+/* BANNER */
+#banner{
+    padding: 0 50px;
+    background-image:url("/asset/img/img1.jpg");
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+#banner::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.24);
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+.contenido_banner{
+    position:relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido_banner h3{
+    font-size: 30px;
+    font-weight: 200;
+    color:var(--light);
+    padding: 10px 0;
+}
+.contenido_banner h3 span{
+    font-weight: 600;
+}
+.btn_empezar{
+    color: var(--light);
+    border: thin solid var(--primary-color);
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: .25s;
+}
+.btn_empezar:hover{
+    background-color: var(--primary-color);
+    color: var(--dark);
+}
+
+/* PERSONAS */
+#personas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#personas div{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#personas div img{
+    width: 170px;
+    border-radius: 50%;
+}
+#personas div h3{
+    color: var(--dark);
+    margin: 15px;
+}
+#personas div p{
+    font-size: 18px;
+}
+.btn_saber_mas{
+    display: inline-block;
+    color: var(--primary-color);
+    padding: 10px 30px;
+    border: 3px solid var(--primary-color);
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: .25s;
+}
+.btn_saber_mas:hover{
+    background-color: var(--primary-color);
+    color: var(--dark);
+}
+
+
+/* ICONOS */
+#iconos{
+    padding:0 50px;
+    background-color: var(--dark);
+}
+.contenido_iconos{
+    padding: 50px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.contenido_iconos div{
+    flex: 1;
+    margin: 20px 0;
+}
+.contenido_iconos div:nth-child(2){
+    border-right: solid thin var(--light);
+    border-left: solid thin var(--light);
+}
+.contenido_iconos div i{
+    color: var(--primary-color);
+}
+.contenido_iconos div h6{
+    font-size: 20px;
+    color: var(--light);
+    font-weight: 100px;
+    margin: 10px 0;
+}
+.contenido_iconos div p{
+    color: var(--light);
+    font-size: 15px;
+}
+.btn_iconos{
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+/* FORMULARIO */
+#contacto{
+    background-color: var(--primary-color);
+    color: var(--light);
+    padding: 50px 0;
+}
+#contacto h4{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+#contacto form{
+    max-width:1200px;
+    margin: 0 auto;
+}
+.datos_form{
+    display: flex;
+}
+.datos_form div,
+.mensaje{
+    padding: 20px;
+    flex: 1;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    background-color: transparent;
+    border-radius: 10px;
+    border: solid thin #95D5B2;
+    padding: 10px 5px;
+    outline: 0;
+    color: var(--light);
+    width: 100%;
+}
+form input:focus,
+form textarea:focus{
+    border: var(--dark) solid thin;
+    box-shadow: 0 0 0 1px var(--dark);
+}
+form input::placeholder,
+form textarea::placeholder{
+    color: #95D5B2;
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+}
+.mensaje textarea{
+    width: 70%;
+}
+.btn_form .btn_saber_mas{
+    display: block;
+    border: solid thin var(--light);
+    color: var(--light);
+    text-align: center;
+    transition: .25s;
+    width: 25%;
+    margin: 1rem auto;
+}
+.btn_form .btn_saber_mas:hover{
+    background-color: var(--secondary-color);
+}
+
+footer{
+    background-color: var(--secondary-color);
+    color: var(--light);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:760px) {
+    .mostrar_menu,
+    .esconder_menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color:var(--dark);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0;
+        transition: .25s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu a{
+        width: 100%;
+        display: block;
+        padding: 2rem;
+        transition: .25s;
+        border-bottom: #40916C solid thin ;
+    }
+    .menu a:hover{
+        border-bottom: #40916C solid thick ;
+        letter-spacing: 3px;
+    }
+
+    .esconder_menu{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    
+    #check:checked~.menu{
+        right: 0;
+    }
+
+    #personas{
+        flex-direction: column;
+    }
+
+    .contenido_iconos{
+        flex-direction: column;
+    }
+    .contenido_iconos div:nth-child(2){
+        border: none;
+        border-top: solid thin var(--light);
+        border-bottom: solid thin var(--light);
+        padding: 2rem 0;
+    }
+    .datos_form{
+        flex-direction: column;
+    }
+    form .mensaje{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
